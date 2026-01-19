@@ -85,11 +85,11 @@ export function ContactSection() {
               </div>
               <h3 className="text-xs md:text-sm font-semibold text-foreground mb-1">Email</h3>
               <a
-                href="mailto:contact@tmocampo.com"
+                href="mailto:transportocampo@gmail.com"
                 className="text-primary text-xs md:text-sm font-medium hover:underline break-all"
                 data-testid="link-contact-email"
               >
-                contact@tmocampo.com
+                transportocampo@gmail.com
               </a>
             </Card>
 

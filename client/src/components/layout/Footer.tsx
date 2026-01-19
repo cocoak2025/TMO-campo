@@ -47,12 +47,12 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:contact@tmocampo.com"
+                  href="mailto:transportocampo@gmail.com"
                   className="flex items-center gap-2 text-background/70 hover:text-background transition-colors"
                   data-testid="link-footer-email"
                 >
                   <Mail className="w-3 h-3 text-primary" />
-                  contact@tmocampo.com
+                  transportocampo@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2 text-background/70">

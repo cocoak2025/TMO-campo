@@ -89,7 +89,7 @@ Submit a quote request for institutions.
 ## Business Information
 - **Company**: TMO-Campo
 - **Phone**: 076 772 00 55
-- **Email**: contact@tmocampo.com
+- **Email**: transportocampo@gmail.com
 - **Address**: Chemin des Palettes 27, 1212 Grand-Lancy, Genève
 - **Pricing**: Starting from 40 CHF
 - **Availability**: 7 days a week

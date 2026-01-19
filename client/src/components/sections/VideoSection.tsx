@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { Play, Video } from "lucide-react";
+import { Play, Truck } from "lucide-react";
+import vehicleImage from "@assets/3_edited_1768825738680.jpg";
+import demoVideo from "@assets/IMG-sortez_1768825738680.mov";
 
 export function VideoSection() {
   return (
@@ -21,28 +23,53 @@ export function VideoSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="overflow-hidden" data-testid="video-placeholder-1">
-            <div className="aspect-video bg-muted relative flex items-center justify-center group cursor-pointer hover-elevate">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
-              <div className="relative z-10 text-center p-8">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                  <Play className="w-10 h-10 text-primary" />
+          <Card className="overflow-hidden" data-testid="video-section-1">
+            <div className="aspect-video relative overflow-hidden">
+              <video
+                className="w-full h-full object-cover"
+                controls
+                poster={vehicleImage}
+                preload="metadata"
+                data-testid="video-demo"
+              >
+                <source src={demoVideo} type="video/quicktime" />
+                <source src={demoVideo} type="video/mp4" />
+                Votre navigateur ne supporte pas la lecture de vidéos.
+              </video>
+            </div>
+            <div className="p-6">
+              <h3 className="font-semibold text-foreground mb-2">
+                Démonstration: Chargement du Fauteuil Roulant
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Découvrez comment notre véhicule permet un accès facile et sécurisé 
+                pour les personnes en fauteuil roulant grâce à notre rampe adaptée.
+              </p>
+            </div>
+          </Card>
+
+          <Card className="overflow-hidden" data-testid="video-section-2">
+            <div className="aspect-video relative overflow-hidden">
+              <img 
+                src={vehicleImage} 
+                alt="Véhicule adapté PMR TMO Campo avec rampe pour fauteuil roulant" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                <div className="p-6 text-white">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Truck className="w-5 h-5" />
+                    <span className="font-medium">Notre Véhicule Adapté</span>
+                  </div>
+                  <p className="text-sm text-white/80">
+                    Véhicule équipé d'une rampe pour un accès facilité
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  Chargement du Fauteuil Roulant
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Démonstration de la rampe d'accès et du système de fixation sécurisé
-                </p>
-              </div>
-              <div className="absolute bottom-4 left-4 flex items-center gap-2 text-xs text-muted-foreground">
-                <Video className="w-4 h-4" />
-                <span>Emplacement pour vidéo 1</span>
               </div>
             </div>
             <div className="p-6">
               <h3 className="font-semibold text-foreground mb-2">
-                Accès Facilité pour Fauteuil Roulant
+                Véhicule Adapté Handicapé Suisse
               </h3>
               <p className="text-sm text-muted-foreground">
                 Notre véhicule est équipé d'une rampe électrique permettant un accès 
@@ -50,43 +77,19 @@ export function VideoSection() {
               </p>
             </div>
           </Card>
-
-          <Card className="overflow-hidden" data-testid="video-placeholder-2">
-            <div className="aspect-video bg-muted relative flex items-center justify-center group cursor-pointer hover-elevate">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
-              <div className="relative z-10 text-center p-8">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                  <Play className="w-10 h-10 text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  Sécurité du Transport
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Système de sécurité et confort pendant le trajet
-                </p>
-              </div>
-              <div className="absolute bottom-4 left-4 flex items-center gap-2 text-xs text-muted-foreground">
-                <Video className="w-4 h-4" />
-                <span>Emplacement pour vidéo 2</span>
-              </div>
-            </div>
-            <div className="p-6">
-              <h3 className="font-semibold text-foreground mb-2">
-                Confort et Sécurité Maximale
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Nos systèmes de fixation et notre conduite adaptée garantissent 
-                un transport confortable et sécurisé pour tous nos passagers.
-              </p>
-            </div>
-          </Card>
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground">
-            Ces emplacements sont prévus pour intégrer vos vidéos de démonstration. 
-            Contactez-nous pour ajouter vos propres contenus vidéo.
-          </p>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {[
+            { title: "Rampe Électrique", desc: "Accès facile et sécurisé" },
+            { title: "Fixations Homologuées", desc: "Sécurité maximale pendant le trajet" },
+            { title: "Espace Confortable", desc: "Confort optimal pour les passagers" },
+          ].map((item, index) => (
+            <div key={index} className="text-center p-4 bg-background rounded-lg border">
+              <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+              <p className="text-sm text-muted-foreground">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

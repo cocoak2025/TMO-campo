@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, CheckCircle2, ArrowRight } from "lucide-react";
+import genevaImage from "@assets/lake-3638347_1920_1768825738680.jpg";
 
 export function HeroSection() {
   const scrollToSection = (id: string) => {
@@ -17,7 +18,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?auto=format&fit=crop&w=2000&q=80')`,
+          backgroundImage: `url('${genevaImage}')`,
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-foreground/80 via-foreground/70 to-foreground/90" />

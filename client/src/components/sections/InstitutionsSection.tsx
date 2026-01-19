@@ -88,22 +88,21 @@ export function InstitutionsSection() {
     return (
       <section
         id="institutions"
-        className="py-20 md:py-28"
+        className="py-12 md:py-20"
         data-testid="section-institutions"
       >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Card className="p-12">
-            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
-              <CheckCircle2 className="w-10 h-10 text-primary" />
+          <Card className="p-6 md:p-8">
+            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <CheckCircle2 className="w-7 h-7 text-primary" />
             </div>
-            <h2 className="text-2xl font-bold text-foreground mb-4">
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">
               Demande Envoyée avec Succès
             </h2>
-            <p className="text-muted-foreground mb-8">
-              Merci pour votre demande de devis. Notre équipe vous contactera 
-              dans les 24 heures ouvrées pour discuter de vos besoins en transport PMR.
+            <p className="text-sm text-muted-foreground mb-6">
+              Notre équipe vous contactera dans les 24 heures.
             </p>
-            <Button onClick={() => setIsSuccess(false)} variant="outline">
+            <Button onClick={() => setIsSuccess(false)} variant="outline" size="sm">
               Nouvelle demande
             </Button>
           </Card>
@@ -115,57 +114,56 @@ export function InstitutionsSection() {
   return (
     <section
       id="institutions"
-      className="py-20 md:py-28"
+      className="py-12 md:py-20"
       data-testid="section-institutions"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="space-y-4 md:space-y-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
-                <Building2 className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-full text-primary text-xs font-medium mb-3">
+                <Building2 className="w-3 h-3" />
                 <span>Pour les Professionnels</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
                 EMS & Institutions
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Vous êtes un EMS, une clinique, un hôpital ou une institution ? 
-                Nous proposons des solutions de transport PMR adaptées à vos besoins 
-                spécifiques avec des tarifs préférentiels pour les partenariats réguliers.
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                Solutions de transport PMR adaptées avec tarifs préférentiels 
+                pour les partenariats réguliers.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="font-semibold text-foreground">
-                Avantages pour les Institutions
+            <div className="space-y-2">
+              <h3 className="text-sm md:text-base font-semibold text-foreground">
+                Avantages
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-1.5 md:space-y-2">
                 {[
-                  "Tarifs préférentiels pour les contrats réguliers",
-                  "Facturation mensuelle simplifiée",
-                  "Interlocuteur dédié pour votre établissement",
-                  "Flexibilité horaire adaptée à vos besoins",
-                  "Véhicules adaptés pour tous types de handicap",
-                  "Rapports de transport détaillés",
+                  "Tarifs préférentiels",
+                  "Facturation mensuelle",
+                  "Interlocuteur dédié",
+                  "Flexibilité horaire",
+                  "Véhicules adaptés",
+                  "Rapports détaillés",
                 ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
+                  <li key={index} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3 h-3 md:w-4 md:h-4 text-primary flex-shrink-0" />
+                    <span className="text-xs md:text-sm text-muted-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
 
-          <Card className="p-6 md:p-8">
-            <h3 className="text-xl font-semibold text-foreground mb-6">
-              Demande de Devis pour Institutions
+          <Card className="p-4 md:p-6">
+            <h3 className="text-base md:text-lg font-semibold text-foreground mb-4">
+              Demande de Devis
             </h3>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="institutionName">Nom de l'institution *</Label>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 md:space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="space-y-1">
+                  <Label htmlFor="institutionName" className="text-xs md:text-sm">Institution *</Label>
                   <Input
                     id="institutionName"
                     placeholder="Ex: EMS Les Acacias"

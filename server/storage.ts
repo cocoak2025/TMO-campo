@@ -66,8 +66,18 @@ export class MemStorage implements IStorage {
   async createQuoteRequest(quote: InsertQuote): Promise<QuoteRequest> {
     const id = randomUUID();
     const quoteRequest: QuoteRequest = { 
-      ...quote, 
-      id, 
+      id,
+      institutionName: quote.institutionName,
+      contactName: quote.contactName,
+      email: quote.email,
+      phone: quote.phone,
+      institutionType: quote.institutionType,
+      numberOfPatients: quote.numberOfPatients ?? null,
+      frequency: quote.frequency ?? null,
+      pickupAddress: quote.pickupAddress ?? null,
+      destinationAddress: quote.destinationAddress ?? null,
+      wheelchairRequired: quote.wheelchairRequired ?? null,
+      additionalInfo: quote.additionalInfo ?? null,
       createdAt: new Date() 
     };
     this.quoteRequests.set(id, quoteRequest);

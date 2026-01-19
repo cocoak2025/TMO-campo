@@ -57,6 +57,9 @@ export function Header() {
               className="h-14 md:h-16 w-auto object-contain"
               style={{ mixBlendMode: isScrolled ? 'multiply' : 'screen' }}
             />
+            <span className={`font-bold text-xl tracking-tight ${isScrolled ? 'text-foreground' : 'text-white'}`}>
+              TMO-Campo
+            </span>
           </a>
 
           <nav className="hidden md:flex items-center gap-1" data-testid="nav-desktop">

@@ -13,7 +13,8 @@ export function Footer() {
               <img 
                 src={logoImage} 
                 alt="TMO Campo Logo" 
-                className="w-12 h-12 object-contain rounded-full bg-white p-0.5"
+                className="w-12 h-12 object-contain"
+                style={{ mixBlendMode: 'screen' }}
               />
               <span className="font-bold text-xl">TMO Campo</span>
             </div>

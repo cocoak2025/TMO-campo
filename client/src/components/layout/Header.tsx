@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
-import logoImage from "@assets/Fond_noir_o-campo_pdf.pdf_(1)_1768826371979.png";
+import logoImage from "@assets/Fond_noir_o-campo_pdf.pdf_(2)_1768826370048.png";
 
 const navLinks = [
   { href: "#services", label: "Nos Services" },
@@ -41,7 +41,7 @@ export function Header() {
       data-testid="header"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           <a
             href="#"
             className="flex items-center gap-2"
@@ -53,13 +53,10 @@ export function Header() {
           >
             <img 
               src={logoImage} 
-              alt="TMO Campo Logo" 
-              className="w-12 h-12 object-contain"
+              alt="TMO-Campo Logo - Transport Médical" 
+              className="h-14 md:h-16 w-auto object-contain"
               style={{ mixBlendMode: isScrolled ? 'multiply' : 'screen' }}
             />
-            <span className={`font-bold text-xl tracking-tight ${isScrolled ? 'text-foreground' : 'text-white'}`}>
-              TMO Campo
-            </span>
           </a>
 
           <nav className="hidden md:flex items-center gap-1" data-testid="nav-desktop">

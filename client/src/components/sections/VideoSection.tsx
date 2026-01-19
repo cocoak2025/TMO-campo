@@ -55,7 +55,7 @@ export function VideoSection() {
             <div className="aspect-video relative overflow-hidden">
               <img 
                 src={vehicleImage} 
-                alt="Véhicule adapté PMR TMO Campo avec rampe pour fauteuil roulant" 
+                alt="Véhicule adapté PMR TMO-Campo avec rampe pour fauteuil roulant" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">

@@ -278,7 +278,7 @@ export function ContactSection() {
 
                 <p className="text-xs text-muted-foreground text-center">
                   En soumettant ce formulaire, vous acceptez d'être contacté 
-                  par TMO Campo concernant votre demande de transport.
+                  par TMO-Campo concernant votre demande de transport.
                 </p>
               </form>
             </Card>

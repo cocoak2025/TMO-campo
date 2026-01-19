@@ -1,7 +1,7 @@
-# TMO Campo - Transport PMR Genève
+# TMO-Campo - Transport PMR Genève
 
 ## Overview
-Professional website for TMO Campo, a PMR (Personnes à Mobilité Réduite) transport service based in Geneva, Switzerland. The site provides information about transport services for people with reduced mobility, elderly, and students, with contact and quote request forms.
+Professional website for TMO-Campo, a PMR (Personnes à Mobilité Réduite) transport service based in Geneva, Switzerland. The site provides information about transport services for people with reduced mobility, elderly, and students, with contact and quote request forms.
 
 ## Project Structure
 
@@ -87,7 +87,7 @@ Submit a quote request for institutions.
 ```
 
 ## Business Information
-- **Company**: TMO Campo
+- **Company**: TMO-Campo
 - **Phone**: 076 772 00 55
 - **Email**: contact@tmocampo.com
 - **Address**: Chemin des Palettes 27, 1212 Grand-Lancy, Genève

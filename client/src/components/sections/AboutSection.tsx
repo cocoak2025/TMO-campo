@@ -56,7 +56,7 @@ export function AboutSection() {
           <div className="space-y-6">
             <Card className="p-8">
               <h3 className="text-xl font-semibold text-foreground mb-6">
-                Pourquoi Choisir TMO Campo ?
+                Pourquoi Choisir TMO-Campo ?
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {features.map((feature, index) => (

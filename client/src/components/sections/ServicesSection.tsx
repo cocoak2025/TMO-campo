@@ -75,7 +75,7 @@ export function ServicesSection() {
             <span className="text-primary">Transport Adapté</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Chez TMO Campo, nous offrons des solutions de transport adaptées pour 
+            Chez TMO-Campo, nous offrons des solutions de transport adaptées pour 
             les personnes handicapées, les écoliers et les personnes âgées à Genève. 
             Véhicule adapté handicapé en Suisse, disponible 7 jours sur 7.
           </p>

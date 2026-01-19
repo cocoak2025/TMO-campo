@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import logoImage from "@assets/Fond_noir_o-campo_pdf.pdf_(1)_1768826371979.png";
+import logoImage from "@assets/Fond_noir_o-campo_pdf.pdf_(2)_1768826370048.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,14 +9,13 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center">
               <img 
                 src={logoImage} 
-                alt="TMO Campo Logo" 
-                className="w-12 h-12 object-contain"
+                alt="TMO-Campo Logo - Transport Médical" 
+                className="h-16 w-auto object-contain"
                 style={{ mixBlendMode: 'screen' }}
               />
-              <span className="font-bold text-xl">TMO Campo</span>
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
               Service de transport PMR à Genève pour personnes à mobilité réduite, 
@@ -88,7 +87,7 @@ export function Footer() {
 
         <div className="border-t border-background/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/60">
-            <p>&copy; {currentYear} TMO Campo. Tous droits réservés.</p>
+            <p>&copy; {currentYear} TMO-Campo. Tous droits réservés.</p>
             <div className="flex items-center gap-6">
               <span>Transport PMR Genève</span>
               <span>Véhicule adapté handicapé Suisse</span>

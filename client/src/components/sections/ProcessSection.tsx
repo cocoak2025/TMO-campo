@@ -38,21 +38,21 @@ export function ProcessSection() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="relative flex flex-col items-center text-center"
+              className="relative flex flex-col items-center text-center pt-6"
               data-testid={`process-step-${index}`}
             >
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-border" />
+                <div className="hidden md:block absolute top-14 left-[60%] w-[80%] h-0.5 bg-border" />
               )}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold z-20">
+                {index + 1}
+              </div>
               <div
                 className={`w-16 h-16 rounded-full ${step.color} flex items-center justify-center mb-4 relative z-10`}
               >
                 <step.icon className="w-8 h-8 text-primary-foreground" />
               </div>
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 w-8 h-8 rounded-full bg-background border-2 border-primary flex items-center justify-center text-sm font-bold text-primary">
-                {index + 1}
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2 mt-2">
+              <h3 className="text-lg font-semibold text-foreground mb-2">
                 {step.title}
               </h3>
               <p className="text-sm text-muted-foreground max-w-xs">

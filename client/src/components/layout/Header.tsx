@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Accessibility } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
+import logoImage from "@assets/Fond_noir_o-campo_pdf.pdf_1768825959538.png";
 
 const navLinks = [
   { href: "#services", label: "Nos Services" },
@@ -50,9 +51,11 @@ export function Header() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Accessibility className="w-6 h-6 text-primary-foreground" />
-            </div>
+            <img 
+              src={logoImage} 
+              alt="TMO Campo Logo" 
+              className="w-12 h-12 object-contain rounded-full bg-white p-0.5"
+            />
             <span className={`font-bold text-xl tracking-tight ${isScrolled ? 'text-foreground' : 'text-white'}`}>
               TMO Campo
             </span>

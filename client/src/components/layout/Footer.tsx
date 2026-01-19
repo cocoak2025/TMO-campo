@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Clock, Accessibility } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import logoImage from "@assets/Fond_noir_o-campo_pdf.pdf_1768825959538.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,9 +10,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <Accessibility className="w-6 h-6 text-primary-foreground" />
-              </div>
+              <img 
+                src={logoImage} 
+                alt="TMO Campo Logo" 
+                className="w-12 h-12 object-contain rounded-full bg-white p-0.5"
+              />
               <span className="font-bold text-xl">TMO Campo</span>
             </div>
             <p className="text-background/70 text-sm leading-relaxed">

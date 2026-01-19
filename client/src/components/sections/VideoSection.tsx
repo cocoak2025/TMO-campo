@@ -27,9 +27,12 @@ export function VideoSection() {
             <div className="aspect-video relative overflow-hidden">
               <video
                 className="w-full h-full object-cover"
-                controls
+                autoPlay
+                muted
+                loop
+                playsInline
                 poster={vehicleImage}
-                preload="metadata"
+                preload="auto"
                 data-testid="video-demo"
               >
                 <source src={demoVideo} type="video/quicktime" />

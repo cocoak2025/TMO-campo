@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import logoImage from "@assets/Fond_noir_o-campo_pdf.pdf_1768825959538.png";
+import logoImage from "@assets/Fond_noir_o-campo_pdf.pdf_(1)_1768826371979.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();

@@ -128,10 +128,7 @@ export function InstitutionsSection() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
                 EMS & Institutions
               </h2>
-              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                Solutions de transport PMR adaptées avec tarifs préférentiels 
-                pour les partenariats réguliers.
-              </p>
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">Solutions de transport PMR adaptées avec tarifs préférentiels pour les partenariats réguliers. </p>
             </div>
 
             <div className="space-y-2">

@@ -77,7 +77,7 @@ export function Footer() {
 
         <div className="border-t border-background/20 mt-6 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-background/60">
-            <p>&copy; {currentYear} TMO-Campo</p>
+            <p>&copy; {currentYear} TMO-Campo · Test MAJ</p>
             <div className="flex items-center gap-4">
               <span>Transport PMR Genève</span>
               <span className="hidden sm:inline">Véhicule adapté handicapé Suisse</span>

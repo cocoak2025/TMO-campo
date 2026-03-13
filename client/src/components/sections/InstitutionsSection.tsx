@@ -37,6 +37,52 @@ const frequencies = [
   { value: "autre", label: "À définir" },
 ];
 
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+const web3FormsAccessKey =
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim() ||
+  "3dd6ec9f-04c6-4a8f-a8c6-82339de43b9d";
+const quoteRecipientEmail =
+  import.meta.env.VITE_QUOTE_RECIPIENT_EMAIL?.trim() ||
+  "transportocampo@gmail.com";
+
+async function sendQuoteRequestViaWeb3Forms(payload: InsertQuote) {
+  const wheelChairText = payload.wheelchairRequired ? "Oui" : "Non";
+
+  const response = await fetch(WEB3FORMS_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      access_key: web3FormsAccessKey,
+      subject: `Nouvelle demande de devis (${payload.institutionName})`,
+      from_name: "Site TMO Campo",
+      to: quoteRecipientEmail,
+      replyto: payload.email,
+      institution: payload.institutionName,
+      contact: payload.contactName,
+      email: payload.email,
+      telephone: payload.phone,
+      type_institution: payload.institutionType,
+      nombre_patients: payload.numberOfPatients || "Non renseigné",
+      frequence: payload.frequency || "Non renseignée",
+      adresse_depart: payload.pickupAddress || "Non renseignée",
+      adresse_destination: payload.destinationAddress || "Non renseignée",
+      fauteuil_roulant: wheelChairText,
+      informations_complementaires: payload.additionalInfo || "Aucune",
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Web3Forms HTTP ${response.status}`);
+  }
+
+  const result = (await response.json()) as { success?: boolean; message?: string };
+  if (!result.success) {
+    throw new Error(result.message || "Échec Web3Forms");
+  }
+}
+
 export function InstitutionsSection() {
   const { toast } = useToast();
   const [isSuccess, setIsSuccess] = useState(false);
@@ -60,8 +106,13 @@ export function InstitutionsSection() {
 
   const mutation = useMutation({
     mutationFn: async (data: InsertQuote) => {
-      const response = await apiRequest("POST", "/api/quote", data);
-      return response;
+      try {
+        const response = await apiRequest("POST", "/api/quote", data);
+        return response;
+      } catch {
+        await sendQuoteRequestViaWeb3Forms(data);
+        return null;
+      }
     },
     onSuccess: () => {
       setIsSuccess(true);

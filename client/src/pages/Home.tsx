@@ -12,8 +12,14 @@ import { ContactSection } from "@/components/sections/ContactSection";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background" data-testid="page-home">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md"
+      >
+        Aller au contenu principal
+      </a>
       <Header />
-      <main>
+      <main id="main-content">
         <HeroSection />
         <ProcessSection />
         <ServicesSection />

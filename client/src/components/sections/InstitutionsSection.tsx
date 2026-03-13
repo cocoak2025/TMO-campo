@@ -162,6 +162,7 @@ export function InstitutionsSection() {
                   <Input
                     id="institutionName"
                     placeholder="Ex: EMS Les Acacias"
+                    autoComplete="organization"
                     {...form.register("institutionName")}
                     data-testid="input-institution-name"
                   />
@@ -176,6 +177,7 @@ export function InstitutionsSection() {
                   <Input
                     id="contactName"
                     placeholder="Votre nom"
+                    autoComplete="name"
                     {...form.register("contactName")}
                     data-testid="input-contact-name"
                   />
@@ -194,6 +196,7 @@ export function InstitutionsSection() {
                     id="email"
                     type="email"
                     placeholder="email@institution.ch"
+                    autoComplete="email"
                     {...form.register("email")}
                     data-testid="input-email"
                   />
@@ -208,6 +211,8 @@ export function InstitutionsSection() {
                   <Input
                     id="phone"
                     placeholder="022 XXX XX XX"
+                    autoComplete="tel"
+                    inputMode="tel"
                     {...form.register("phone")}
                     data-testid="input-phone"
                   />

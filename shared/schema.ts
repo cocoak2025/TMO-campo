@@ -33,10 +33,10 @@ export const insertContactSchema = createInsertSchema(contactMessages).pick({
   phone: true,
   message: true,
 }).extend({
-  email: z.string().email("Email invalide"),
-  phone: z.string().min(10, "Numéro de téléphone invalide"),
-  name: z.string().min(2, "Nom requis"),
-  message: z.string().min(10, "Message trop court"),
+  email: z.string().trim().email("Email invalide").max(160, "Email trop long"),
+  phone: z.string().trim().min(10, "Numéro de téléphone invalide").max(30, "Numéro trop long"),
+  name: z.string().trim().min(2, "Nom requis").max(120, "Nom trop long"),
+  message: z.string().trim().min(10, "Message trop court").max(2000, "Message trop long"),
 });
 
 export type InsertContact = z.infer<typeof insertContactSchema>;
@@ -72,11 +72,16 @@ export const insertQuoteSchema = createInsertSchema(quoteRequests).pick({
   wheelchairRequired: true,
   additionalInfo: true,
 }).extend({
-  email: z.string().email("Email invalide"),
-  phone: z.string().min(10, "Numéro de téléphone invalide"),
-  institutionName: z.string().min(2, "Nom de l'institution requis"),
-  contactName: z.string().min(2, "Nom du contact requis"),
-  institutionType: z.string().min(1, "Type d'institution requis"),
+  email: z.string().trim().email("Email invalide").max(160, "Email trop long"),
+  phone: z.string().trim().min(10, "Numéro de téléphone invalide").max(30, "Numéro trop long"),
+  institutionName: z.string().trim().min(2, "Nom de l'institution requis").max(160, "Nom de l'institution trop long"),
+  contactName: z.string().trim().min(2, "Nom du contact requis").max(120, "Nom du contact trop long"),
+  institutionType: z.string().trim().min(1, "Type d'institution requis").max(50, "Type d'institution trop long"),
+  numberOfPatients: z.string().trim().max(100, "Valeur trop longue").optional(),
+  frequency: z.string().trim().max(60, "Valeur trop longue").optional(),
+  pickupAddress: z.string().trim().max(200, "Adresse trop longue").optional(),
+  destinationAddress: z.string().trim().max(200, "Adresse trop longue").optional(),
+  additionalInfo: z.string().trim().max(2000, "Informations trop longues").optional(),
 });
 
 export type InsertQuote = z.infer<typeof insertQuoteSchema>;

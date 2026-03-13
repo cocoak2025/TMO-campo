@@ -43,7 +43,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 md:h-24">
           <a
-            href="#"
+            href="#main-content"
             className="flex items-center gap-2"
             data-testid="link-logo"
             onClick={(e) => {
@@ -99,6 +99,9 @@ export function Header() {
           <button
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
             data-testid="button-mobile-menu"
           >
             {isMobileMenuOpen ? (
@@ -111,7 +114,11 @@ export function Header() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background border-t" data-testid="nav-mobile">
+        <div
+          id="mobile-navigation"
+          className="md:hidden bg-background border-t"
+          data-testid="nav-mobile"
+        >
           <nav className="px-4 py-4 space-y-2">
             {navLinks.map((link) => (
               <button

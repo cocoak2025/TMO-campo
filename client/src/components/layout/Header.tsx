@@ -51,14 +51,11 @@ export function Header() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            <img 
-              src={logoImage} 
-              alt="TMO-Campo Logo - Transport Médical" 
+            <img
+              src={logoImage}
+              alt="TMO-Campo Logo - Transport Médical"
               className="h-14 md:h-16 w-auto object-contain"
             />
-            <span className={`font-bold text-xl tracking-tight ${isScrolled ? 'text-foreground' : 'text-white'}`}>
-              TMO-Campo
-            </span>
           </a>
 
           <nav className="hidden md:flex items-center gap-1" data-testid="nav-desktop">

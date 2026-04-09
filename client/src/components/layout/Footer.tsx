@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import logoImage from "@assets/Fond_noir_o-campo_pdf.pdf_(2)_1768826370048.png";
+import logoImage from "@assets/logo-tmo.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,7 +14,6 @@ export function Footer() {
                 src={logoImage} 
                 alt="TMO-Campo Logo - Transport Médical" 
                 className="h-12 md:h-14 w-auto object-contain"
-                style={{ mixBlendMode: 'screen' }}
               />
             </div>
             <p className="text-background/70 text-xs md:text-sm leading-relaxed">

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
-import logoImage from "@assets/Fond_noir_o-campo_pdf.pdf_(2)_1768826370048.png";
+import logoImage from "@assets/logo-tmo.png";
 
 const navLinks = [
   { href: "#services", label: "Nos Services" },
@@ -55,7 +55,6 @@ export function Header() {
               src={logoImage} 
               alt="TMO-Campo Logo - Transport Médical" 
               className="h-14 md:h-16 w-auto object-contain"
-              style={{ mixBlendMode: isScrolled ? 'multiply' : 'screen' }}
             />
             <span className={`font-bold text-xl tracking-tight ${isScrolled ? 'text-foreground' : 'text-white'}`}>
               TMO-Campo

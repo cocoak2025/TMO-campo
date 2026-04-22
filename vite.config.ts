@@ -2,7 +2,13 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
-import prerender from "@prerenderer/rollup-plugin";
+
+// Pré-rendu désactivé : Puppeteer ne peut pas lancer Chromium sur Vercel
+// build. À remplacer par une solution compatible serverless
+// (ex: @vite-plugin-static-copy + chrome-aws-lambda, ou vite-react-ssg)
+// quand on aura le temps. Le site reste une SPA classique en attendant
+// — le <noscript> et les métadonnées JSON-LD assurent déjà le minimum SEO.
+const enablePrerender = process.env.ENABLE_PRERENDER === "true";
 
 export default defineConfig({
   plugins: [
@@ -19,30 +25,31 @@ export default defineConfig({
           ),
         ]
       : []),
-    ...(process.env.NODE_ENV === "production"
+    ...(enablePrerender && process.env.NODE_ENV === "production"
       ? [
-          prerender({
-            routes: ["/", "/mentions-legales"],
-            renderer: "@prerenderer/renderer-puppeteer",
-            rendererOptions: {
-              renderAfterDocumentEvent: "render-event",
-              maxConcurrentRoutes: 2,
-              headless: true,
-            },
-            postProcess(renderedRoute: {
-              route: string;
-              html: string;
-              originalRoute: string;
-              outputPath?: string;
-            }) {
-              // Preserve absolute asset URLs and ensure trailing slash removal for index path
-              renderedRoute.html = renderedRoute.html.replace(
-                /http:\/\/localhost:\d+/g,
-                "",
-              );
-              return renderedRoute;
-            },
-          }),
+          await import("@prerenderer/rollup-plugin").then((m) =>
+            m.default({
+              routes: ["/", "/mentions-legales"],
+              renderer: "@prerenderer/renderer-puppeteer",
+              rendererOptions: {
+                renderAfterDocumentEvent: "render-event",
+                maxConcurrentRoutes: 2,
+                headless: true,
+              },
+              postProcess(renderedRoute: {
+                route: string;
+                html: string;
+                originalRoute: string;
+                outputPath?: string;
+              }) {
+                renderedRoute.html = renderedRoute.html.replace(
+                  /http:\/\/localhost:\d+/g,
+                  "",
+                );
+                return renderedRoute;
+              },
+            }),
+          ),
         ]
       : []),
   ],

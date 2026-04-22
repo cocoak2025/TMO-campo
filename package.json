@@ -156,10 +156,6 @@
 
   "devDependencies": {
 
-    "@prerenderer/renderer-puppeteer": "^1.2.4",
-
-    "@prerenderer/rollup-plugin": "^0.3.12",
-
     "@replit/vite-plugin-cartographer": "^0.4.4",
 
     "@replit/vite-plugin-dev-banner": "^0.1.1",

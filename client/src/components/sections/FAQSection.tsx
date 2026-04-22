@@ -15,12 +15,12 @@ const faqs = [
   {
     question: "Vos véhicules sont-ils équipés pour les fauteuils roulants ?",
     answer:
-      "Oui, tous nos véhicules sont équipés d'une rampe d'accès pour fauteuils roulants, ainsi que de fixations homologuées pour garantir un transport sécurisé. Le passager peut rester dans son fauteuil pendant tout le trajet.",
+      "Oui, nos véhicules sont équipés d'une rampe d'accès pour fauteuils roulants et de fixations adaptées pour un transport sécurisé. Le passager peut rester dans son fauteuil pendant tout le trajet.",
   },
   {
     question: "Comment réserver un transport ?",
     answer:
-      "Le plus simple est de nous contacter par WhatsApp au 076 772 00 55 — nous répondons rapidement. Vous pouvez également nous appeler directement ou remplir le formulaire de contact sur le site. Nous recommandons de réserver la veille pour garantir la disponibilité, mais nous traitons aussi les demandes d'urgence.",
+      "Le plus simple est de nous contacter par WhatsApp ou téléphone au 076 772 00 55 — nous répondons rapidement. Vous pouvez également remplir le formulaire de rappel sur le site. Nous recommandons de réserver à l'avance pour garantir la disponibilité, et nous traitons aussi les demandes d'urgence dans la mesure du possible.",
   },
   {
     question: "Êtes-vous disponibles le week-end et les jours fériés ?",
@@ -40,12 +40,12 @@ const faqs = [
   {
     question: "Quelles zones desservez-vous ?",
     answer:
-      "Nous couvrons tout le canton de Genève (Genève-ville, Carouge, Lancy, Meyrin, Vernier, Onex, Versoix, Plan-les-Ouates, etc.) et les alentours, y compris l'aéroport et les principaux établissements médicaux (HUG, cliniques). Des trajets inter-cantonaux sont possibles sur demande.",
+      "Nous couvrons tout le canton de Genève (Genève-ville, Carouge, Lancy, Meyrin, Vernier, Onex, Versoix, Plan-les-Ouates, etc.) et les alentours, y compris l'aéroport et les principaux établissements médicaux. Des trajets inter-cantonaux sont possibles sur demande.",
   },
   {
     question: "Le chauffeur peut-il aider à monter et descendre du véhicule ?",
     answer:
-      "Absolument. Nos chauffeurs sont formés pour accompagner les passagers de la porte d'entrée jusqu'au véhicule, les aider à s'installer en toute sécurité, et les accompagner jusqu'à leur destination finale. C'est inclus dans nos services.",
+      "Oui. Nos chauffeurs accompagnent les passagers de la porte d'entrée jusqu'au véhicule, les aident à s'installer en toute sécurité, et les accompagnent jusqu'à leur destination finale.",
   },
 ];
 
@@ -98,5 +98,4 @@ export function FAQSection() {
   );
 }
 
-// Export FAQ data so it can be used to generate JSON-LD in index.html or a script
 export const faqData = faqs;

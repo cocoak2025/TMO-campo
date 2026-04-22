@@ -32,7 +32,7 @@ const tarifs = [
 export function TarifsSection() {
   const scrollToContact = () => {
     document
-      .querySelector("#contact")
+      .querySelector("#rappel")
       ?.scrollIntoView({ behavior: "smooth" });
   };
 

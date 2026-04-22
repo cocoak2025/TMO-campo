@@ -25,11 +25,7 @@ const zones = [
   "Troinex",
   "Confignon",
   "Aéroport GVA",
-  "HUG Cluse-Roseraie",
-  "Clinique de Carouge",
-  "Clinique des Grangettes",
-  "Hôpital de Beau-Séjour",
-  "Hôpital de Loëx",
+  "Hôpitaux et cliniques du canton",
 ];
 
 export function ZonesSection() {
@@ -45,8 +41,8 @@ export function ZonesSection() {
             Zones <span className="text-primary">desservies</span>
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            Nous couvrons tout le canton de Genève et ses alentours. Quelques
-            exemples de communes et établissements desservis au quotidien :
+            Nous couvrons tout le canton de Genève et ses alentours. Voici
+            quelques-unes des communes où nous intervenons au quotidien :
           </p>
         </div>
 

@@ -4,41 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    
+
     <!-- SEO Meta Tags -->
     <title>TMO-Campo | Transport PMR Genève - Véhicule Adapté Handicapé Suisse</title>
-    <meta name="description" content="Service de transport PMR à Genève pour personnes à mobilité réduite, handicapés et écoliers. Véhicules adaptés avec rampe fauteuil roulant. 7/7 dès 40 CHF. Contactez-nous au 076 772 00 55." />
-    <meta name="keywords" content="Transport PMR Genève, Véhicule adapté handicapé Suisse, Transport écoliers mobilité réduite, transport handicapé Genève, transport personnes âgées Genève, taxi PMR Genève" />
+    <meta name="description" content="Transport PMR à Genève pour personnes à mobilité réduite, handicapés, seniors et écoliers. Véhicules adaptés avec rampe fauteuil roulant. 7/7 dès 40 CHF. ☎ 076 772 00 55" />
     <meta name="author" content="TMO-Campo" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#1264d6" />
     <link rel="canonical" href="https://tmo-campo.ch/" />
-    
+
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tmo-campo.ch/" />
     <meta property="og:title" content="TMO-Campo | Transport PMR Genève - Véhicule Adapté Handicapé" />
-    <meta property="og:description" content="Service de transport PMR à Genève pour personnes à mobilité réduite. Véhicules adaptés, chauffeurs professionnels. 7/7 dès 40 CHF." />
+    <meta property="og:description" content="Transport PMR à Genève pour personnes à mobilité réduite. Véhicules adaptés, chauffeurs professionnels. 7/7 dès 40 CHF." />
     <meta property="og:image" content="https://tmo-campo.ch/og-image.jpg" />
     <meta property="og:locale" content="fr_CH" />
     <meta property="og:site_name" content="TMO-Campo" />
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="TMO-Campo | Transport PMR Genève" />
-    <meta name="twitter:description" content="Service de transport PMR à Genève pour personnes à mobilité réduite. Véhicules adaptés. 7/7 dès 40 CHF." />
+    <meta name="twitter:description" content="Transport PMR à Genève pour personnes à mobilité réduite. Véhicules adaptés. 7/7 dès 40 CHF." />
     <meta name="twitter:image" content="https://tmo-campo.ch/og-image.jpg" />
-    
+
     <!-- Geographic -->
     <meta name="geo.region" content="CH-GE" />
     <meta name="geo.placename" content="Genève" />
-    
+    <meta name="geo.position" content="46.1756607;6.1196906" />
+    <meta name="ICBM" content="46.1756607, 6.1196906" />
+
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- JSON-LD Structured Data -->
+
+    <!-- JSON-LD : LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -50,6 +51,8 @@
       "url": "https://tmo-campo.ch",
       "telephone": "+41767720055",
       "email": "transportocampo@gmail.com",
+      "image": "https://tmo-campo.ch/og-image.jpg",
+      "logo": "https://tmo-campo.ch/favicon.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Chemin des Palettes 27",
@@ -64,14 +67,15 @@
         "longitude": 6.1196906
       },
       "areaServed": [
-        {
-          "@type": "City",
-          "name": "Genève"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Canton de Genève"
-        }
+        { "@type": "City", "name": "Genève" },
+        { "@type": "City", "name": "Carouge" },
+        { "@type": "City", "name": "Lancy" },
+        { "@type": "City", "name": "Meyrin" },
+        { "@type": "City", "name": "Vernier" },
+        { "@type": "City", "name": "Onex" },
+        { "@type": "City", "name": "Versoix" },
+        { "@type": "City", "name": "Plan-les-Ouates" },
+        { "@type": "AdministrativeArea", "name": "Canton de Genève" }
       ],
       "serviceType": [
         "Transport PMR",
@@ -81,42 +85,51 @@
         "Transport personnes âgées",
         "Transport médical"
       ],
-      "priceRange": "À partir de 40 CHF",
+      "priceRange": "$$",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
         "opens": "00:00",
         "closes": "23:59"
       },
-      "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
+      "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer", "TWINT"],
       "currenciesAccepted": "CHF",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services de transport PMR",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Transport PMR intra-Genève" },
+            "priceSpecification": { "@type": "PriceSpecification", "price": "40", "priceCurrency": "CHF" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Transport vers aéroport GVA" },
+            "priceSpecification": { "@type": "PriceSpecification", "price": "65", "priceCurrency": "CHF" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Transport scolaire adapté" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Transport médical (HUG, cliniques)" }
+          }
+        ]
+      },
       "sameAs": []
     }
     </script>
-    
-    <!-- Service Schema -->
+
+    <!-- JSON-LD : Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
       "serviceType": "Transport PMR Genève",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "TMO-Campo"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Genève",
-        "addressCountry": "CH"
-      },
+      "provider": { "@type": "LocalBusiness", "name": "TMO-Campo", "@id": "https://tmo-campo.ch/#organization" },
+      "areaServed": { "@type": "City", "name": "Genève", "addressCountry": "CH" },
       "description": "Service de transport adapté pour personnes à mobilité réduite à Genève. Véhicules équipés de rampes pour fauteuils roulants, chauffeurs formés et attentionnés.",
       "offers": {
         "@type": "Offer",
@@ -129,9 +142,106 @@
       }
     }
     </script>
+
+    <!-- JSON-LD : FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien coûte un transport PMR à Genève ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nos tarifs démarrent à 40 CHF pour un trajet intra-ville Genève. Pour un trajet vers une commune voisine, compter environ 50 CHF. Les tarifs varient selon la distance et la durée. Nous proposons des tarifs préférentiels pour les trajets réguliers et les partenariats avec les EMS et institutions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vos véhicules sont-ils équipés pour les fauteuils roulants ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, tous nos véhicules sont équipés d'une rampe d'accès pour fauteuils roulants, ainsi que de fixations homologuées pour garantir un transport sécurisé. Le passager peut rester dans son fauteuil pendant tout le trajet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment réserver un transport ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le plus simple est de nous contacter par WhatsApp au 076 772 00 55. Vous pouvez également nous appeler directement ou remplir le formulaire de contact sur le site. Nous recommandons de réserver la veille."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Êtes-vous disponibles le week-end et les jours fériés ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, nous sommes disponibles 7 jours sur 7, y compris le week-end et les jours fériés."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Transportez-vous les écoliers à mobilité réduite ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, nous assurons le transport scolaire d'enfants à mobilité réduite avec une attention particulière à la sécurité et à la ponctualité."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles zones desservez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous couvrons tout le canton de Genève (Genève-ville, Carouge, Lancy, Meyrin, Vernier, Onex, Versoix, Plan-les-Ouates, etc.) et les alentours, y compris l'aéroport et les principaux établissements médicaux (HUG, cliniques)."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD : BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tmo-campo.ch/" }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Contenu SEO de secours (visible pour les crawlers qui n'exécutent pas le JS) -->
+    <noscript>
+      <div style="max-width:900px;margin:40px auto;padding:20px;font-family:sans-serif;line-height:1.6;">
+        <h1>TMO-Campo — Transport PMR Genève</h1>
+        <p><strong>Service de transport adapté pour personnes à mobilité réduite à Genève.</strong> Véhicules équipés de rampes pour fauteuils roulants, chauffeurs formés et attentionnés. Disponible 7 jours sur 7 dès 40 CHF.</p>
+        <h2>Nos services</h2>
+        <ul>
+          <li>Transport PMR (personnes à mobilité réduite)</li>
+          <li>Transport de personnes âgées</li>
+          <li>Transport scolaire pour enfants handicapés</li>
+          <li>Transport médical vers hôpitaux (HUG) et cliniques</li>
+          <li>Transport depuis/vers l'aéroport de Genève</li>
+          <li>Partenariats EMS et institutions</li>
+        </ul>
+        <h2>Zones desservies</h2>
+        <p>Genève, Carouge, Lancy, Grand-Lancy, Meyrin, Vernier, Onex, Versoix, Plan-les-Ouates, Bernex, Thônex, Chêne-Bougeries, Veyrier, et tout le canton de Genève.</p>
+        <h2>Contact</h2>
+        <p>
+          Téléphone : <a href="tel:+41767720055">076 772 00 55</a><br>
+          WhatsApp : <a href="https://wa.me/41767720055">+41 76 772 00 55</a><br>
+          Email : <a href="mailto:transportocampo@gmail.com">transportocampo@gmail.com</a><br>
+          Adresse : Chemin des Palettes 27, 1212 Grand-Lancy, Genève
+        </p>
+        <p>Ce site nécessite JavaScript pour un affichage complet. Activez JavaScript ou contactez-nous directement par téléphone.</p>
+      </div>
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

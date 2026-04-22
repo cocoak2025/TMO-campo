@@ -4,10 +4,12 @@ import { Menu, X, Phone } from "lucide-react";
 import logoImage from "@assets/logo-tmo.png";
 
 const navLinks = [
-  { href: "#services", label: "Nos Services" },
-  { href: "#about", label: "À Propos" },
-  { href: "#videos", label: "Vidéos" },
+  { href: "#services", label: "Services" },
+  { href: "#tarifs", label: "Tarifs" },
+  { href: "#zones", label: "Zones" },
+  { href: "#avis", label: "Avis" },
   { href: "#institutions", label: "Institutions" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ];
 

@@ -1,12 +1,18 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
+import { FloatingCallButton } from "@/components/layout/FloatingCallButton";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { QuickContactSection } from "@/components/sections/QuickContactSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
+import { TarifsSection } from "@/components/sections/TarifsSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { VideoSection } from "@/components/sections/VideoSection";
+import { ZonesSection } from "@/components/sections/ZonesSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { InstitutionsSection } from "@/components/sections/InstitutionsSection";
+import { FAQSection } from "@/components/sections/FAQSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
@@ -21,15 +27,21 @@ export default function Home() {
       <Header />
       <main id="main-content">
         <HeroSection />
+        <QuickContactSection />
         <ProcessSection />
         <ServicesSection />
+        <TarifsSection />
         <AboutSection />
         <VideoSection />
+        <ZonesSection />
+        <TestimonialsSection />
         <InstitutionsSection />
+        <FAQSection />
         <ContactSection />
       </main>
       <Footer />
       <WhatsAppButton />
+      <FloatingCallButton />
     </div>
   );
 }
